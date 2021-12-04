@@ -17,16 +17,6 @@ pub fn q1() {
                 zero_counts[i] = zero_counts[i] + 1;
             }
         }
-
-        // count 0's in each position
-        // let split: Vec<&str> = x.split().collect();
-        // let movement = split[1].parse::<i32>().unwrap();
-        // match split[0] {
-        //     "forward" => horizonal_position = horizonal_position + movement,
-        //     "up" => depth = depth - movement,
-        //     "down" => depth = depth + movement,
-        //     _ => {}
-        // }
     });
 
     let mut gamma_rate_str: String = "".to_string();
