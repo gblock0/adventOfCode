@@ -3,7 +3,7 @@ use std::collections::HashSet;
 use crate::helpers;
 
 pub fn q1() {
-    let split_cont: Vec<i32> = helpers::read_and_split_file("./inputs/day1.txt")
+    let split_cont: Vec<i32> = helpers::read_and_split_file("./inputs/2020/day1.txt")
         .into_iter()
         .map(|s| s.parse::<i32>().unwrap())
         .collect();
@@ -19,7 +19,7 @@ pub fn q1() {
     }
 }
 pub fn q2() {
-    let split_cont: Vec<i32> = helpers::read_and_split_file("./inputs/day1.txt")
+    let split_cont: Vec<i32> = helpers::read_and_split_file("./inputs/2020/day1.txt")
         .into_iter()
         .map(|s| s.parse::<i32>().unwrap())
         .collect();
