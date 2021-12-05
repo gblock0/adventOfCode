@@ -1,5 +1,6 @@
 use crate::helpers;
 
+#[allow(dead_code)]
 pub fn q1() {
     let mut depth = 0;
     let mut horizonal_position = 0;
@@ -22,6 +23,7 @@ pub fn q1() {
     );
 }
 
+#[allow(dead_code)]
 pub fn q2() {
     let mut depth = 0;
     let mut horizonal_position = 0;

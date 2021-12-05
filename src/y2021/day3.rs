@@ -1,6 +1,7 @@
 use crate::helpers;
 use std::iter;
 
+#[allow(dead_code)]
 pub fn q1() {
     let mut line_count = 0;
     let lines: Vec<String> = helpers::read_and_split_file("./inputs/2021/day3.txt");
@@ -39,6 +40,7 @@ pub fn q1() {
     );
 }
 
+#[allow(dead_code)]
 pub fn q2() {
     let mut nums_to_check = helpers::read_and_split_file("./inputs/2021/day3.txt");
 

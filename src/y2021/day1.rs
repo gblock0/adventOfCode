@@ -1,5 +1,6 @@
 use crate::helpers;
 
+#[allow(dead_code)]
 pub fn q1() {
     let mut num_increased = 0;
     let split_cont: Vec<i32> = helpers::read_and_split_file("./inputs/2021/day1.txt")
@@ -16,6 +17,7 @@ pub fn q1() {
     println!("Num Increased: {}", num_increased);
 }
 
+#[allow(dead_code)]
 pub fn q2() {
     let mut num_increased = 0;
     let split_cont: Vec<i32> = helpers::read_and_split_file("./inputs/2021/day1.txt")
