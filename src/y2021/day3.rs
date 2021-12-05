@@ -38,3 +38,73 @@ pub fn q1() {
         gamma_rate * epison_rate
     );
 }
+
+pub fn q2() {
+    let mut nums_to_check = helpers::read_and_split_file("./inputs/2021/day3.txt");
+
+    let mut index_to_check = 0;
+
+    loop {
+        let mut zero_nums: Vec<String> = Vec::new();
+        let mut one_nums: Vec<String> = Vec::new();
+        nums_to_check.iter().for_each(|x| {
+            let nums: Vec<char> = x.chars().into_iter().collect();
+
+            if nums[index_to_check] == '0' {
+                zero_nums.push(x.to_string())
+            } else {
+                one_nums.push(x.to_string());
+            }
+        });
+
+        if zero_nums.len() > one_nums.len() {
+            nums_to_check = zero_nums;
+        } else {
+            nums_to_check = one_nums;
+        }
+
+        if nums_to_check.len() == 1 {
+            break;
+        }
+
+        index_to_check = index_to_check + 1;
+    }
+
+    let oxygen_generator_rating = isize::from_str_radix(&nums_to_check[0], 2).unwrap();
+    nums_to_check = helpers::read_and_split_file("./inputs/2021/day3.txt");
+    index_to_check = 0;
+
+    loop {
+        let mut zero_nums: Vec<String> = Vec::new();
+        let mut one_nums: Vec<String> = Vec::new();
+        nums_to_check.iter().for_each(|x| {
+            let nums: Vec<char> = x.chars().into_iter().collect();
+
+            if nums[index_to_check] == '0' {
+                zero_nums.push(x.to_string())
+            } else {
+                one_nums.push(x.to_string());
+            }
+        });
+
+        if zero_nums.len() <= one_nums.len() {
+            nums_to_check = zero_nums;
+        } else {
+            nums_to_check = one_nums;
+        }
+
+        if nums_to_check.len() == 1 {
+            break;
+        }
+
+        index_to_check = index_to_check + 1;
+    }
+    let co2_scrubber_rating = isize::from_str_radix(&nums_to_check[0], 2).unwrap();
+
+    println!(
+        "2021 day3 q2: oxygen_generator_rating x CO2 scrubber rating: {} x {} = {}",
+        oxygen_generator_rating,
+        co2_scrubber_rating,
+        oxygen_generator_rating * co2_scrubber_rating
+    );
+}
